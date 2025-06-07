@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>audio_alert_cpp</name>
+  <version>0.0.0</version>
+  <description>ROS2 C++ node for prioritized audio alerts via ALSA</description>
+  <maintainer email="aveshshah@gmail.com">aveshshah</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- build tools -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>pkg-config</buildtool_depend>
+
+  <!-- runtime dependencies -->
+  <depend>rclcpp</depend>
+  <depend>audioalert_msg</depend>
+  <depend>ament_index_cpp</depend>
+  <depend>nlohmann_json</depend>
+
+  <!-- ALSA for playback -->
+  <build_depend>libasound2-dev</build_depend>
+  <exec_depend>libasound2</exec_depend>
+
+  <!-- libsndfile for reading WAVs -->
+  <build_depend>libsndfile1-dev</build_depend>
+  <exec_depend>libsndfile1</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
